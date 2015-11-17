@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <vector>
 
 #define CLUSTER_SIZE 1024
 #define SECTOR_SIZE 512
@@ -38,9 +39,12 @@ union{
 class FAT {
     
 public:
-    
     bool createFAT();
     bool loadFAT();
+    int findEmptyPlace();
+    std::vector<int> seekClusterParts(int initialPosition);
+    bool setUsedCluster(int clusterPosition, int tipo);
+    bool clearCluster(int clusterPosition);
     
 private:
     

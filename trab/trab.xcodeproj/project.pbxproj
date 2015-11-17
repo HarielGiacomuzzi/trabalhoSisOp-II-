@@ -10,6 +10,7 @@
 		DBF541441BF40D5700F6CD05 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF541431BF40D5700F6CD05 /* main.cpp */; };
 		DBF5414C1BF40E5000F6CD05 /* FatManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF5414A1BF40E5000F6CD05 /* FatManager.cpp */; };
 		DBF5414F1BF410E700F6CD05 /* Shell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF5414D1BF410E700F6CD05 /* Shell.cpp */; };
+		DBF541541BFAAB6800F6CD05 /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF541521BFAAB6800F6CD05 /* File.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		DBF5414B1BF40E5000F6CD05 /* FatManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FatManager.hpp; sourceTree = "<group>"; };
 		DBF5414D1BF410E700F6CD05 /* Shell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shell.cpp; sourceTree = "<group>"; };
 		DBF5414E1BF410E700F6CD05 /* Shell.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shell.hpp; sourceTree = "<group>"; };
+		DBF541521BFAAB6800F6CD05 /* File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = File.cpp; sourceTree = "<group>"; };
+		DBF541531BFAAB6800F6CD05 /* File.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = File.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				DBF5414B1BF40E5000F6CD05 /* FatManager.hpp */,
 				DBF5414D1BF410E700F6CD05 /* Shell.cpp */,
 				DBF5414E1BF410E700F6CD05 /* Shell.hpp */,
+				DBF541521BFAAB6800F6CD05 /* File.cpp */,
+				DBF541531BFAAB6800F6CD05 /* File.hpp */,
 			);
 			path = trab;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF541441BF40D5700F6CD05 /* main.cpp in Sources */,
+				DBF541541BFAAB6800F6CD05 /* File.cpp in Sources */,
 				DBF5414F1BF410E700F6CD05 /* Shell.cpp in Sources */,
 				DBF5414C1BF40E5000F6CD05 /* FatManager.cpp in Sources */,
 			);
