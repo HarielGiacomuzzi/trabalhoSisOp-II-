@@ -45,7 +45,7 @@ public:
     bool loadFAT();
     // retorna o indice de um cluster vazio
     int findEmptyPlace();
-    // retorna uma lista de todas as partes(clusters) de um arquivo
+    // retorna uma lista de todas as indices das partes(clusters) de um arquivo
     std::vector<int> seekClusterParts(int initialPosition);
     // marca um cluster como usado e que tipo de arquivo tem lá
     bool setUsedCluster(int clusterPosition, int tipo);

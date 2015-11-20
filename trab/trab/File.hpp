@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <string>
+#include <vector>
 
 class File {
     
@@ -19,6 +20,10 @@ public:
     bool createFile(std::string fileName);
     // lê o conteudo do arquivo e printa na tela
     void printFileContent(std::string fileName);
+    // lê todos os clusters do arquivo (trás tudo pra memória)
+    void readFile(std::string fileName);
+    // limpa os clusters do arquivo e salva tudo denovo
+    void saveFile(std::string fileName, std::vector<void*> fileParts);
 private:
     
 };
