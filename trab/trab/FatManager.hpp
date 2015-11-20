@@ -39,11 +39,17 @@ union{
 class FAT {
     
 public:
+    // cria a tabela fat e o arquivo fat.part
     bool createFAT();
+    // carrega a fat para a memória
     bool loadFAT();
+    // retorna o indice de um cluster vazio
     int findEmptyPlace();
+    // retorna uma lista de todas as partes(clusters) de um arquivo
     std::vector<int> seekClusterParts(int initialPosition);
+    // marca um cluster como usado e que tipo de arquivo tem lá
     bool setUsedCluster(int clusterPosition, int tipo);
+    // remove a marcação de usado da fat para que possa ser escrito novamente
     bool clearCluster(int clusterPosition);
     
 private:

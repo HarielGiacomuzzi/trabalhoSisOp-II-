@@ -15,7 +15,9 @@
 class File {
     
 public:
+    // cria um arquivo e o aloca em clusters
     bool createFile(std::string fileName);
+    // lê o conteudo do arquivo e printa na tela
     void printFileContent(std::string fileName);
 private:
     

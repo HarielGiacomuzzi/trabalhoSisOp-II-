@@ -15,8 +15,14 @@
 class Shell {
     
 public:
+    // inicializa o sistema, cria os aquivos e carrega a fat para a memória
     bool init();
+    // carrega o bash
     bool load();
+    
+    //*************************************
+    //* comandos do bash                  *
+    //*************************************
     bool ls(std::string dirName);
     bool mkdir(std::string dirName);
     bool create(std::string fileName, std::string dirName);
