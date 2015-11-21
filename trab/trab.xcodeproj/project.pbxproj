@@ -34,6 +34,7 @@
 		DBF5414E1BF410E700F6CD05 /* Shell.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shell.hpp; sourceTree = "<group>"; };
 		DBF541521BFAAB6800F6CD05 /* File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = File.cpp; sourceTree = "<group>"; };
 		DBF541531BFAAB6800F6CD05 /* File.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = File.hpp; sourceTree = "<group>"; };
+		DBF541551C00F10C00F6CD05 /* defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 				DBF5414E1BF410E700F6CD05 /* Shell.hpp */,
 				DBF541521BFAAB6800F6CD05 /* File.cpp */,
 				DBF541531BFAAB6800F6CD05 /* File.hpp */,
+				DBF541551C00F10C00F6CD05 /* defines.h */,
 			);
 			path = trab;
 			sourceTree = "<group>";

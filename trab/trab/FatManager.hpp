@@ -12,29 +12,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
-
-#define CLUSTER_SIZE 1024
-#define SECTOR_SIZE 512
-#define NUMBER_OF_CLUSTERS 4096
-
-/* entrada de diretorio, 32 bytes cada */
-typedef struct{
-    uint8_t filename[18];
-    uint8_t attributes;
-    uint8_t reserved[7];
-    uint16_t first_block;
-    uint32_t size;
-} dir_entry_t;
-
-/* 8 clusters da tabela FAT, 4096 entradas de 16 bits = 8192 bytes*/
-uint16_t fat[NUMBER_OF_CLUSTERS];
-
-/* diretorios (incluindo ROOT), 32 entradas de diretorio
- com 32 bytes cada = 1024 bytes ou bloco de dados de 1024 bytes*/
-union{
-    dir_entry_t dir[CLUSTER_SIZE / sizeof(dir_entry_t)];
-    uint8_t data[CLUSTER_SIZE];
-} data_cluster;
+#include "defines.h"
 
 class FAT {
     
@@ -47,12 +25,21 @@ public:
     int findEmptyPlace();
     // retorna uma lista de todas as indices das partes(clusters) de um arquivo
     std::vector<int> seekClusterParts(int initialPosition);
-    // marca um cluster como usado e que tipo de arquivo tem lá
-    bool setUsedCluster(int clusterPosition, int tipo);
+    // marca um cluster como usado e que tipo de arquivo tem lá (na real qual a próxima parte do arquivo e se é end of file :P)
+    bool setUsedCluster(int clusterPosition, uint16_t next);
     // remove a marcação de usado da fat para que possa ser escrito novamente
     bool clearCluster(int clusterPosition);
-    
+    // escreve os dados de um cluster no disco NÃO É NA FAT !!! E O CLUSTER_DATA TEM QUE TER O TAMANHO DE UM CLUSTER SENÃO VAI DAR MERDA ! eu avisei...
+    bool writeClusterData(int clusterIndex, void* clusterData);
+    // lê os dados de um cluster do disco retorna null se não é possivel ler os dados
+    void* readClusterData(int clusterIndex);
+    // salva as alterações no disco e fecha o descritor do arquivo
+    bool unloadFAT();
 private:
+    // check if the system is loaded
+    bool isFatLoaded = false;
+    // stores the fat descriptor
+    FILE *fileOpen = 0;
     
 };
 
