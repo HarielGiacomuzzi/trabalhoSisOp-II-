@@ -10,16 +10,27 @@
 #define Utils_hpp
 
 #include <stdio.h>
+#include <sstream>
+#include <vector>
 #include <string>
+#include "structures.h"
+#include "FatManager.hpp"
+
+
 
 class Shell {
-    
+
+
 public:
+
+    folderMetadata* root;
+    FAT* instance;
+
     // inicializa o sistema, cria os aquivos e carrega a fat para a memória
     bool init();
     // carrega o bash
     bool load();
-    
+
     //*************************************
     //* comandos do bash                  *
     //*************************************
@@ -30,6 +41,9 @@ public:
     bool write(std::string fileName, std::string dirName, std::string data);
     bool append(std::string fileName, std::string dirName, std::string data);
     bool read(std::string fileName, std::string dirName);
+
+
+
 };
 
 #endif /* Utils_hpp */

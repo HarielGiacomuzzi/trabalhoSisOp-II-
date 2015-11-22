@@ -15,7 +15,16 @@
 #include "defines.h"
 
 class FAT {
-    
+
+uint16_t fat[NUMBER_OF_CLUSTERS];
+///* diretorios (incluindo ROOT), 32 entradas de diretorio
+// com 32 bytes cada = 1024 bytes ou bloco de dados de 1024 bytes*/
+union{
+    dir_entry_t dir[CLUSTER_SIZE / sizeof(dir_entry_t)];
+    uint8_t data[CLUSTER_SIZE];
+} data_cluster;
+
+
 public:
     // cria a tabela fat e o arquivo fat.part
     bool createFAT();
@@ -40,7 +49,7 @@ private:
     bool isFatLoaded = false;
     // stores the fat descriptor
     FILE *fileOpen = 0;
-    
+
 };
 
 

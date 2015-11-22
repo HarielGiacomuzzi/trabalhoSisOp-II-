@@ -7,3 +7,100 @@
 //
 
 #include "Shell.hpp"
+#include "structures.h"
+#include <sstream>
+#include <iostream>
+
+
+/* funcoes auxiliares sobre strings */
+// chamada da funcao: std::vector<std::string> x = split("one:two::three", ':');
+
+std::vector<std::string> &split(const std::string &s, char delim, std::vector<std::string> &elems) {
+    std::stringstream ss(s);
+    std::string item;
+    while (std::getline(ss, item, delim)) {
+        elems.push_back(item);
+    }
+    return elems;
+}
+
+
+std::vector<std::string> split(const std::string &s, char delim) {
+    std::vector<std::string> elems;
+    split(s, delim, elems);
+    return elems;
+}
+
+
+
+
+bool Shell::init(){
+    instance = new FAT();
+    root =  (folderMetadata *) instance->readClusterData(8);
+    return true;
+}
+
+bool Shell::ls(std::string dirName){
+    folderMetadata* actual = root;
+
+    /* se nao foi inserido nenhuma string, imprime as entradas do root */
+    if (dirName.size() == 0){
+        for (int i = 0; i < sizeof(root->folderEntry); i++){
+           std::string fileName;
+           fileName.assign(root->folderEntry[i].filename, root->folderEntry[i].filename + sizeof(root->folderEntry[i].filename));
+           std::cout << fileName << '\n';
+        }
+    }
+    /* caso contrario, verifica o caminho  a partir de um vetor splitado a partir dos chars '/' no caminho */
+    else{
+        std::vector<std::string>  path = split(dirName, '/');
+        for (int i = 0; i < path.size(); i++){
+            std::string aux = path[i];
+            /* procura item na tabela de arquivos do diretorio  */
+            for(int j; j < sizeof(actual->folderEntry); j++){
+                bool dirNaoEncontrado = true;
+                std::string fileName;
+                fileName.assign(actual->folderEntry[j].filename, actual->folderEntry[j].filename + sizeof(actual->folderEntry[j].filename));
+                if(aux == fileName){
+                    int i = (int) ((instance->readClusterData(actual->folderEntry[j].first_block)));
+                    actual = (folderMetadata *) instance->readClusterData(i);
+                    dirNaoEncontrado = false;
+                }
+                /* se nao possui a entrada corretamente, retorna erro */
+                if (dirNaoEncontrado){
+                    std::cout << "Diretorio : " << fileName << " nao encontrado " <<'\n';
+                    return false;
+                }
+
+            }
+
+        }
+        /* imprime os itens caso tenha encontrado corretamente */
+        for (int i = 0; i < sizeof(actual->folderEntry); i++){
+           std::string fileName;
+           fileName.assign(actual->folderEntry[i].filename, actual->folderEntry[i].filename + sizeof(actual->folderEntry[i].filename));
+           std::cout << fileName << '\n';
+            }
+        }
+        return true;
+    }
+
+
+bool Shell::mkdir(std::string dirName){
+    std::vector<std::string>  path = split(dirName, '/');
+    folderMetadata* actual = root;
+    if (path.size() <= 1){
+        for (int i = 0; i < sizeof(root->folderEntry); i++){
+            if (root->folderEntry[i] == NULL){
+
+            }
+        }
+
+    }
+
+
+
+
+    return true;
+}
+
