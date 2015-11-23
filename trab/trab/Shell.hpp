@@ -23,8 +23,8 @@ class Shell {
 
 public:
 
-    folderMetadata* root;
-    FAT* instance;
+    folderMetadata root;
+    FAT instance;
 
     // inicializa o sistema, cria os aquivos e carrega a fat para a memória
     bool init();

@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DBF541441BF40D5700F6CD05 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF541431BF40D5700F6CD05 /* main.cpp */; };
-		DBF5414C1BF40E5000F6CD05 /* FatManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF5414A1BF40E5000F6CD05 /* FatManager.cpp */; };
-		DBF5414F1BF410E700F6CD05 /* Shell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF5414D1BF410E700F6CD05 /* Shell.cpp */; };
-		DBF541541BFAAB6800F6CD05 /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF541521BFAAB6800F6CD05 /* File.cpp */; };
+		DBF541581C0294F900F6CD05 /* trab.c in Sources */ = {isa = PBXBuildFile; fileRef = DBF541571C0294F900F6CD05 /* trab.c */; };
+		DBF541631C0296E800F6CD05 /* FatManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF5415B1C0296E800F6CD05 /* FatManager.cpp */; };
+		DBF541641C0296E800F6CD05 /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF5415D1C0296E800F6CD05 /* File.cpp */; };
+		DBF541651C0296E800F6CD05 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF5415F1C0296E800F6CD05 /* main.cpp */; };
+		DBF541661C0296E800F6CD05 /* Shell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF541601C0296E800F6CD05 /* Shell.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,14 +28,17 @@
 
 /* Begin PBXFileReference section */
 		DBF541401BF40D5700F6CD05 /* trab */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = trab; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBF541431BF40D5700F6CD05 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		DBF5414A1BF40E5000F6CD05 /* FatManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FatManager.cpp; sourceTree = "<group>"; };
-		DBF5414B1BF40E5000F6CD05 /* FatManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FatManager.hpp; sourceTree = "<group>"; };
-		DBF5414D1BF410E700F6CD05 /* Shell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shell.cpp; sourceTree = "<group>"; };
-		DBF5414E1BF410E700F6CD05 /* Shell.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shell.hpp; sourceTree = "<group>"; };
-		DBF541521BFAAB6800F6CD05 /* File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = File.cpp; sourceTree = "<group>"; };
-		DBF541531BFAAB6800F6CD05 /* File.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = File.hpp; sourceTree = "<group>"; };
-		DBF541551C00F10C00F6CD05 /* defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		DBF541571C0294F900F6CD05 /* trab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = trab.c; sourceTree = "<group>"; };
+		DBF541591C0296E800F6CD05 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		DBF5415A1C0296E800F6CD05 /* fat.part */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fat.part; sourceTree = "<group>"; };
+		DBF5415B1C0296E800F6CD05 /* FatManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FatManager.cpp; sourceTree = "<group>"; };
+		DBF5415C1C0296E800F6CD05 /* FatManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FatManager.hpp; sourceTree = "<group>"; };
+		DBF5415D1C0296E800F6CD05 /* File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = File.cpp; sourceTree = "<group>"; };
+		DBF5415E1C0296E800F6CD05 /* File.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = File.hpp; sourceTree = "<group>"; };
+		DBF5415F1C0296E800F6CD05 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DBF541601C0296E800F6CD05 /* Shell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shell.cpp; sourceTree = "<group>"; };
+		DBF541611C0296E800F6CD05 /* Shell.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shell.hpp; sourceTree = "<group>"; };
+		DBF541621C0296E800F6CD05 /* structures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = structures.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,14 +71,17 @@
 		DBF541421BF40D5700F6CD05 /* trab */ = {
 			isa = PBXGroup;
 			children = (
-				DBF541431BF40D5700F6CD05 /* main.cpp */,
-				DBF5414A1BF40E5000F6CD05 /* FatManager.cpp */,
-				DBF5414B1BF40E5000F6CD05 /* FatManager.hpp */,
-				DBF5414D1BF410E700F6CD05 /* Shell.cpp */,
-				DBF5414E1BF410E700F6CD05 /* Shell.hpp */,
-				DBF541521BFAAB6800F6CD05 /* File.cpp */,
-				DBF541531BFAAB6800F6CD05 /* File.hpp */,
-				DBF541551C00F10C00F6CD05 /* defines.h */,
+				DBF5415F1C0296E800F6CD05 /* main.cpp */,
+				DBF541591C0296E800F6CD05 /* defines.h */,
+				DBF5415A1C0296E800F6CD05 /* fat.part */,
+				DBF5415B1C0296E800F6CD05 /* FatManager.cpp */,
+				DBF5415C1C0296E800F6CD05 /* FatManager.hpp */,
+				DBF5415D1C0296E800F6CD05 /* File.cpp */,
+				DBF5415E1C0296E800F6CD05 /* File.hpp */,
+				DBF541601C0296E800F6CD05 /* Shell.cpp */,
+				DBF541611C0296E800F6CD05 /* Shell.hpp */,
+				DBF541621C0296E800F6CD05 /* structures.h */,
+				DBF541571C0294F900F6CD05 /* trab.c */,
 			);
 			path = trab;
 			sourceTree = "<group>";
@@ -135,10 +142,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBF541441BF40D5700F6CD05 /* main.cpp in Sources */,
-				DBF541541BFAAB6800F6CD05 /* File.cpp in Sources */,
-				DBF5414F1BF410E700F6CD05 /* Shell.cpp in Sources */,
-				DBF5414C1BF40E5000F6CD05 /* FatManager.cpp in Sources */,
+				DBF541641C0296E800F6CD05 /* File.cpp in Sources */,
+				DBF541581C0294F900F6CD05 /* trab.c in Sources */,
+				DBF541651C0296E800F6CD05 /* main.cpp in Sources */,
+				DBF541661C0296E800F6CD05 /* Shell.cpp in Sources */,
+				DBF541631C0296E800F6CD05 /* FatManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +265,7 @@
 				DBF541491BF40D5700F6CD05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
